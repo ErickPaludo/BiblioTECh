@@ -1,0 +1,28 @@
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.exe
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.deps.json
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.runtimeconfig.json
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.dll
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.pdb
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.AssemblyInfoInputs.cache
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.AssemblyInfo.cs
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.csproj.CoreCompileInputs.cache
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.dll
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\obj\Debug\net6.0\refint\BiblioTECh.dll
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.pdb
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.genruntimeconfig.cache
+C:\Users\erick\source\Repos\BiblioTECh\BiblioTECh\obj\Debug\net6.0\ref\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.exe
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.deps.json
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.runtimeconfig.json
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.pdb
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.AssemblyInfo.cs
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\obj\Debug\net6.0\refint\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.pdb
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.genruntimeconfig.cache
+C:\Users\erick\OneDrive\Área de Trabalho\old\OOP-Biotec-13fc539a0da896c2283de00238569f61225ac9f0\BiblioTECh\BiblioTECh\obj\Debug\net6.0\ref\BiblioTECh.dll

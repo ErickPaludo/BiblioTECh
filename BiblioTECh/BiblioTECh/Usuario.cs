@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.ConstrainedExecution;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace BiblioTECh
+{
+    public class Usuario : Pessoa
+    {
+        private string matricula;
+        private string curso;
+        public Usuario(string nome, string rua, int numero, string complemento, string bairro, string cidade, string uf, string cep, string matricula, string curso)
+        : base(nome, rua, numero, complemento, bairro, cidade, uf, cep)
+        {
+            this.matricula = matricula;
+            this.curso = curso;
+        }
+
+        public string Matricula { get { return matricula; } set { value = matricula; } }
+        public string Curso { get { return curso; } set { value = curso; } }
+        public override string ToString()
+        {
+            return $"  Nome: {Nome}\n  Rua: {Rua}\n  Número: {Numero}\n  Complemento: {Complemento}\n  Bairro: {Bairro}\n  Cidade: {Cidade}\n  UF: {Uf}\n  CEP: {Cep}\n  Matrícula: {matricula}\n  Curso: {curso}";
+        }
+    }
+}

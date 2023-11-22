@@ -17,7 +17,11 @@ namespace BiblioTECh
             {
                 Console.Write(mensagem);
                 aux = Console.ReadLine();
-                if (int.TryParse(aux, out n))
+                if (aux == string.Empty)
+                {
+                    Console.WriteLine("Favor informar os dados!");
+                }
+                else if (int.TryParse(aux, out n))
                 {
                     ok = true;
                 }
@@ -28,30 +32,7 @@ namespace BiblioTECh
             } while (ok == false);
             return n;
         }
-        public int LeInteiro(string mensagem, int min, int max) //Entrada de dados com consistência - executa até ser digitado um inteiro. Mensagem de entrada inválida
-        {
-            string aux;
-            int n = 0;
-            bool ok = false;
-            do
-            {
-                Console.Write(mensagem);
-                aux = Console.ReadLine();
-                if (int.TryParse(aux, out n))
-                {
-                    ok = true;
-                    if ((n < min) || (n > max))
-                    {
-                        ok = false;
-                    }
-                }
-                if (ok == false)
-                {
-                    Console.WriteLine("Entrada inválida! Digite Novamente!");
-                }
-            } while (ok == false);
-            return n;
-        }
+
         public double LeDouble(string mensagem) //Entrada de dados com consistência - executa até ser digitado um inteiro. Mensagem de entrada inválida
         {
             string aux;
@@ -61,7 +42,11 @@ namespace BiblioTECh
             {
                 Console.Write(mensagem);
                 aux = Console.ReadLine();
-                if (double.TryParse(aux, out n))
+                if (aux == string.Empty)
+                {
+                    Console.WriteLine("Favor informar os dados!");
+                }
+                else if (double.TryParse(aux, out n))
                 {
                     ok = true;
                 }
@@ -81,7 +66,11 @@ namespace BiblioTECh
             {
                 Console.Write(mensagem);
                 aux = Console.ReadLine();
-                if (char.TryParse(aux, out c))
+                if (aux == string.Empty)
+                {
+                    Console.WriteLine("Favor informar os dados!");
+                }
+                else if (char.TryParse(aux, out c))
                 {
                     ok = true;
                 }
@@ -95,8 +84,21 @@ namespace BiblioTECh
         public string LeString(string mensagem) //Entrada de dados com consistência - executa até ser digitado um inteiro. Mensagem de entrada inválida
         {
             string aux;
-            Console.Write(mensagem);
-            aux = Console.ReadLine();
+            bool ok = false;
+            do
+            {
+                Console.Write(mensagem);
+                aux = Console.ReadLine();
+                if (aux == string.Empty)
+                {
+                    Console.WriteLine("Favor informar os dados!");
+                }
+                else
+                {
+                    ok = true;
+                }
+
+            } while (ok == false);
             return aux;
         }
     }

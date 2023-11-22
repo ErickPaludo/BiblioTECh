@@ -1,52 +1,131 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BiblioTECh
 {
-    public class CadUser
+    internal class CadUser
     {
         private const int TAM = 10;
-        private Usuario[] cadastros;
-        private int pos = 0;
+        static Usuario[] cadastros = new Usuario[TAM];
+        static int pos = 0;
 
-        public CadUser()
+        public void Temp() //REGISTRA USER FICTICIOS PARA TESTES
         {
-            // Inicialize o array no construtor
-            cadastros = new Usuario[TAM];
+            cadastros[0] = new Usuario("bot1", "Rua Aberlino", 123, "Apt 400", "Atiradores", "Jopiville", "SC", "4566548-99", "456886", "Ciencias da computacao");
+            cadastros[1] = new Usuario("bot2", "Rua Belmiro", 456, "Apt 201", "Centro", "VilleVille", "SC", "7890123-45", "789012", "Engenharia Civil");
+            cadastros[2] = new Usuario("bot3", "Rua Carlos", 789, "Casa 15", "Jardim Botanico", "Floresville", "SP", "1234567-89", "123456", "Medicina");
+            cadastros[3] = new Usuario("bot4", "Rua Diego", 101, "Apt 502", "Praia do Sol", "SolCity", "RJ", "2345678-90", "234567", "Administração");
+            cadastros[4] = new Usuario("bot5", "Rua Edna", 112, "Casa 3", "Vila Feliz", "Alegreville", "RS", "3456789-01", "345678", "Psicologia");
+            cadastros[5] = new Usuario("bot6", "Rua Fernando", 234, "Apt 1201", "Centro", "VilleVille", "SC", "4567890-12", "456789", "Economia");
+            cadastros[6] = new Usuario("bot7", "Rua Gabriela", 567, "Casa 7", "Jardim das Flores", "Floralândia", "SP", "5678901-23", "567890", "Arquitetura");
+            cadastros[7] = new Usuario("bot8", "Rua Hugo", 789, "Apt 303", "Praia do Sol", "SolCity", "RJ", "6789012-34", "678901", "Biologia");
+            cadastros[8] = new Usuario("bot9", "Rua Isabel", 890, "Casa 10", "Vila Tranquila", "CalmCity", "MG", "7890123-45", "789012", "Direito");
+            cadastros[9] = new Usuario("bot10", "Rua João", 111, "Apt 705", "Centro", "VilleVille", "SC", "8901234-56", "890123", "História");
+            pos = 9;
         }
-
-        public int Tamanho()
+        public bool ValidarEspaco()
         {
-            return pos;
-        }
-
-        public void Insere(Usuario item)
-        {
-            if (pos < TAM)
+            if (pos < TAM - 1)
             {
-                cadastros[pos] = item;
-                pos++;
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Sem espaco para novos cadastros!");
+                return false;
             }
         }
-
-        public Usuario GetUser(int posicao)
+        public void Registrador(string auxnome, string auxendereco, int auxnumero, string auxcomplemento, string auxbairro, string auxcidade, string auxestado, string auxcep, string auxmatricula, string auxcurso)
         {
-            Usuario item = null;
-            if (posicao >= 0 && posicao < pos)
-            {
-                item = cadastros[posicao]; // Corrigido para usar posicao
-            }
-            return item;
+            cadastros[pos] = new Usuario(auxnome, auxendereco, auxnumero, auxcomplemento, auxbairro, auxcidade, auxestado, auxcep, auxmatricula, auxcurso);
+            Console.Clear();
+            Console.WriteLine($"Usuario {cadastros[pos].Nome} foi registrado com sucesso");
+            pos++;
         }
-
-        public void CadView()
+        public void Removedor(string nome)
         {
-            if (cadastros != null)
+            bool validador = false;
+            for (int i = 0; i < TAM; i++)
             {
-                for (int i = 0; i < pos; i++) // Corrigido para usar pos
+                if (cadastros[i] != null)
+                {
+                    if (cadastros[i].Nome == nome)
+                    {
+                        Console.Write($"Removendo Usuario {cadastros[i].Nome}\n");
+                        for (int j = i + 1; i < TAM; j++)
+                        {
+                            validador = true;
+                            if (cadastros[i] == null)
+                            {
+                                break;
+                            }
+                            else if (i != TAM - 1)
+                            {
+                                cadastros[i] = cadastros[j];
+                                i++;
+                            }
+                            else
+                            {
+                                cadastros[i] = null;
+                                i++;
+                                pos--;
+                            }
+                        }
+                        Console.WriteLine("Usuario Removido com Sucesso!");
+                    }
+
+                }
+            }
+            if (validador == false)
+            {
+                Console.WriteLine("Usuario nao identificado, tente novamente!");
+            }
+        }
+        public bool ValidarRem()
+        {
+            if (cadastros[0] == null)
+            {
+                Console.WriteLine("Sem usuarios cadastrados");
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("Nome de Usuarios:");
+                Console.WriteLine("---------------");
+                for (int i = 0; i < TAM; i++)
                 {
                     if (cadastros[i] != null)
                     {
-                        Console.WriteLine(cadastros[i]);
+                        Console.Write($"- {cadastros[i].Nome} ");
+                    }
+                }
+                return true;
+            }
+
+        }
+        public void ExibirCadastros()
+        {
+            if (cadastros[0] == null)
+            {
+                Console.WriteLine("Sem usuarios cadastrados");
+            }
+            else
+            {
+                Console.WriteLine("Dados Usuario:");
+                Console.WriteLine("---------------");
+                for (int i = 0; i < TAM; i++)
+                {
+                    if (cadastros[i] != null)
+                    {
+                        Console.WriteLine($"{cadastros[i]}");
+                        Console.WriteLine("---------------");
+                    }
+                    else
+                    {
+
                     }
                 }
             }

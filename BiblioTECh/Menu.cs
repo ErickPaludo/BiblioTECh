@@ -25,7 +25,8 @@ namespace BiblioTECh
                 Console.WriteLine("2- Remover usuarios;");
                 Console.WriteLine("3- Status de espaco;");
                 Console.WriteLine("4- Verificar usuario por posicao;");
-                Console.WriteLine("456 ** Adiciona usuarios que estao gravados internamente;"); //Temporário
+                Console.WriteLine("5- Voltar");
+                //LEMBRAR DE APAGAR OPCAO 456
                 entrada = entradaDados.LeInteiro("Selecione uma opcao: ");
 
                 switch (entrada)
@@ -44,6 +45,9 @@ namespace BiblioTECh
                     case 4:
                         Console.Clear();
                         FiltrarPosi();
+                        break;
+                    case 5:
+                        Environment.Exit(0);
                         break;
                     case 456:
                         Console.Clear();

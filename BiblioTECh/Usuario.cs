@@ -21,8 +21,8 @@ namespace BiblioTECh
             this.curso = curso;
         }
 
-        public string Matricula { get { return matricula; } set { value = matricula; } }
-        public string Curso { get { return curso; } set { value = curso; } }
+        public string Matricula { get { return matricula; } set { matricula = value; } }
+        public string Curso { get { return curso; } set { curso = value; } }
         public override string ToString()
         {
             return $"{Nome};{endereco.Rua};{endereco.Numero};{endereco.Complemento};{endereco.Bairro};{endereco.Cidade};{endereco.Uf};{endereco.Cep};{matricula};{curso}";

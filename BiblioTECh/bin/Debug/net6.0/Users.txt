@@ -4,7 +4,6 @@ bot3;Rua Carlos;789;Casa 15;Jardim Botanico;Floresville;SP;1234567-89;123456;Med
 bot4;Rua Diego;101;Apt 502;Praia do Sol;SolCity;RJ;2345678-90;234567;Administração
 bot5;Rua Edna;112;Casa 3;Vila Feliz;Alegreville;RS;3456789-01;345678;Psicologia
 bot6;Rua Fernando;234;Apt 1201;Centro;VilleVille;SC;4567890-12;456789;Economia
-bot7;Rua Gabriela;567;Casa 7;Jardim das Flores;Floralândia;SP;5678901-23;567890;Arquitetura
 bot8;Rua Hugo;789;Apt 303;Praia do Sol;SolCity;RJ;6789012-34;678901;Biologia
 bot9;Rua Isabel;890;Casa 10;Vila Tranquila;CalmCity;MG;7890123-45;789012;Direito
-bot10;Rua João;111;Apt 705;Centro;VilleVille;SC;8901234-56;890123;História
+Erick;Rua Irma Valieira;72;Apt 405;Centro;Caxias do Sul;RS;8901234-56;890123;Ciencias da Computacao

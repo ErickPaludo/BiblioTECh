@@ -10,8 +10,10 @@ namespace BiblioTECh // Note: actual namespace depends on the project name.
     public class Program
     {
         Menu menu;
+        private SalvarDados salvar = new SalvarDados();
         public Program()
-        {
+        {  
+            salvar.Lerdados();
         menu = new Menu(); 
         }
         static void Main(string[] args)

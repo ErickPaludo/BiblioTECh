@@ -6,6 +6,7 @@ namespace BiblioTECh
     {
         EntradaDados entradaDados;
         CadUser cad = new CadUser();
+        private SalvarDados salvar = new SalvarDados();
         int entrada;
         bool verificador = true;
 
@@ -73,6 +74,7 @@ namespace BiblioTECh
                 string auxmatricula = entradaDados.LeString("Informe o RGM do aluno: ");
                 string auxcurso = entradaDados.LeString("Informe o seu curso: ");
                 cad.Registrador(auxnome, auxendereco, auxnumero, auxcomplemento, auxbairro, auxcidade, auxestado, auxcep, auxmatricula, auxcurso);
+                salvar.GravarDados();
             }
         }
         public void FiltrarPosi()

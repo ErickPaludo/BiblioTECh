@@ -18,6 +18,7 @@ namespace BiblioTECh
             get { return cadastros; }
             set { cadastros = value; }
         }
+        public int Pos { get { return pos; } set { pos = value; } }
         public int Tamanho()
         {
             return TAM;
@@ -44,6 +45,7 @@ namespace BiblioTECh
             pos++;
             cadastros[9] = new Usuario("bot10", "Rua João", 111, "Apt 705", "Centro", "VilleVille", "SC", "8901234-56", "890123", "História");
             pos++;
+            salvar.GravarDados();
         }
         public bool ValidarEspaco()
         {
@@ -60,7 +62,6 @@ namespace BiblioTECh
         public void Registrador(string auxnome, string auxendereco, int auxnumero, string auxcomplemento, string auxbairro, string auxcidade, string auxestado, string auxcep, string auxmatricula, string auxcurso)
         {
             cadastros[pos] = new Usuario(auxnome, auxendereco, auxnumero, auxcomplemento, auxbairro, auxcidade, auxestado, auxcep, auxmatricula, auxcurso);
-            salvar.GravarDados();
             Console.Clear();
             Console.WriteLine($"Usuario {cadastros[pos].Nome} foi registrado com sucesso");
             pos++;
@@ -105,9 +106,8 @@ namespace BiblioTECh
                             }
                             Console.Clear();
                             Console.WriteLine($"Usuario {auxnome}|{matricula} foi Removido com Sucesso!"); // revisar da linha 107 ate 87
-                            salvar.GravarDados();
                         }
-
+                        salvar.GravarDados();
                     }
                 }
 

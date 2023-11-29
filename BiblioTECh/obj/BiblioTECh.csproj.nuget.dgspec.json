@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\BiblioTECh\\BiblioTECh\\BiblioTECh.csproj": {}
+    "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\Corrigido\\BiblioTECh\\BiblioTECh.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\BiblioTECh\\BiblioTECh\\BiblioTECh.csproj": {
+    "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\Corrigido\\BiblioTECh\\BiblioTECh.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\BiblioTECh\\BiblioTECh\\BiblioTECh.csproj",
+        "projectUniqueName": "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\Corrigido\\BiblioTECh\\BiblioTECh.csproj",
         "projectName": "BiblioTECh",
-        "projectPath": "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\BiblioTECh\\BiblioTECh\\BiblioTECh.csproj",
+        "projectPath": "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\Corrigido\\BiblioTECh\\BiblioTECh.csproj",
         "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\BiblioTECh\\BiblioTECh\\obj\\",
+        "outputPath": "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\Corrigido\\BiblioTECh\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

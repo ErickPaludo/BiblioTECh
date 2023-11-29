@@ -40,3 +40,45 @@ C:\Users\erick\OneDrive\Área de Trabalho\BiblioTECh\BiblioTECh\obj\Debug\net6.0
 C:\Users\erick\OneDrive\Área de Trabalho\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.pdb
 C:\Users\erick\OneDrive\Área de Trabalho\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.genruntimeconfig.cache
 C:\Users\erick\OneDrive\Área de Trabalho\BiblioTECh\BiblioTECh\obj\Debug\net6.0\ref\BiblioTECh.dll
+D:\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.exe
+D:\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.deps.json
+D:\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.runtimeconfig.json
+D:\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.dll
+D:\BiblioTECh\BiblioTECh\bin\Debug\net6.0\BiblioTECh.pdb
+D:\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.GeneratedMSBuildEditorConfig.editorconfig
+D:\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.AssemblyInfoInputs.cache
+D:\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.AssemblyInfo.cs
+D:\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.csproj.CoreCompileInputs.cache
+D:\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.dll
+D:\BiblioTECh\BiblioTECh\obj\Debug\net6.0\refint\BiblioTECh.dll
+D:\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.pdb
+D:\BiblioTECh\BiblioTECh\obj\Debug\net6.0\BiblioTECh.genruntimeconfig.cache
+D:\BiblioTECh\BiblioTECh\obj\Debug\net6.0\ref\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\obj\Debug\net6.0\BiblioTECh.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\obj\Debug\net6.0\BiblioTECh.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\obj\Debug\net6.0\BiblioTECh.AssemblyInfo.cs
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\obj\Debug\net6.0\BiblioTECh.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\obj\Debug\net6.0\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\obj\Debug\net6.0\refint\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\obj\Debug\net6.0\BiblioTECh.pdb
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\bin\Debug\net6.0\BiblioTECh.exe
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\bin\Debug\net6.0\BiblioTECh.deps.json
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\bin\Debug\net6.0\BiblioTECh.runtimeconfig.json
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\bin\Debug\net6.0\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\bin\Debug\net6.0\BiblioTECh.pdb
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\obj\Debug\net6.0\BiblioTECh.genruntimeconfig.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Nova pasta\BiblioTECh\obj\Debug\net6.0\ref\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\bin\Debug\net6.0\BiblioTECh.exe
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\bin\Debug\net6.0\BiblioTECh.deps.json
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\bin\Debug\net6.0\BiblioTECh.runtimeconfig.json
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\bin\Debug\net6.0\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\bin\Debug\net6.0\BiblioTECh.pdb
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\obj\Debug\net6.0\BiblioTECh.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\obj\Debug\net6.0\BiblioTECh.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\obj\Debug\net6.0\BiblioTECh.AssemblyInfo.cs
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\obj\Debug\net6.0\BiblioTECh.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\obj\Debug\net6.0\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\obj\Debug\net6.0\refint\BiblioTECh.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\obj\Debug\net6.0\BiblioTECh.pdb
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\obj\Debug\net6.0\BiblioTECh.genruntimeconfig.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Corrigido\BiblioTECh\obj\Debug\net6.0\ref\BiblioTECh.dll

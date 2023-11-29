@@ -5,7 +5,7 @@ namespace BiblioTECh
     public class Menu
     {
         EntradaDados entradaDados;
-        CadUser cad;
+        CadUser cad = new CadUser();
         int entrada;
         bool verificador = true;
 
@@ -18,12 +18,13 @@ namespace BiblioTECh
         {
             do
             {
-                cad = new CadUser();
                 entradaDados = new EntradaDados();
                 Console.WriteLine("Informe a Opcao desejada:");
                 Console.WriteLine("1- Registrar usuario;");
-                Console.WriteLine("2- Mostrar usuarios;");
-                Console.WriteLine("3- Remover usuarios;");
+                Console.WriteLine("2- Remover usuarios;");
+                Console.WriteLine("3- Status de espaco;");
+                Console.WriteLine("4- Verificar usuario por posicao;");
+                Console.WriteLine("456 ** Adiciona usuarios que estao gravados internamente;"); //Temporário
                 entrada = entradaDados.LeInteiro("Selecione uma opcao: ");
 
                 switch (entrada)
@@ -31,16 +32,19 @@ namespace BiblioTECh
                     case 1:
                         RegUser();
                         break;
-
                     case 2:
                         Console.Clear();
-                        cad.ExibirCadastros();
+                        cad.Removedor();
                         break;
                     case 3:
                         Console.Clear();
-                        RemovUser();
+                        cad.ExibirCadastros();
                         break;
-                    case 4: //REGISTRA USER FICTICIOS PARA TESTES
+                    case 4:
+                        Console.Clear();
+                        FiltrarPosi();
+                        break;
+                    case 456:
                         Console.Clear();
                         cad.Temp();
                         break;
@@ -71,17 +75,14 @@ namespace BiblioTECh
                 cad.Registrador(auxnome, auxendereco, auxnumero, auxcomplemento, auxbairro, auxcidade, auxestado, auxcep, auxmatricula, auxcurso);
             }
         }
-        public void RemovUser()
+        public void FiltrarPosi()
         {
-            Console.Clear();
-            bool val = cad.ValidarRem();
-            if (val == true)
+            if (cad.NoNull() == true)
             {
-                Console.WriteLine("\nRemover Usuario");
-                string auxnome = entradaDados.LeString("Informe o nome do usuario que deve ser removido: ");
-                cad.Removedor(auxnome);
+                Console.WriteLine("Cadastro de Usuario");
+                int auxpos = entradaDados.LeInteiro("Verificar usuario na posicao: ");
+                cad.Filtro(auxpos);
             }
-           
         }
     }
 }

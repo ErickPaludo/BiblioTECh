@@ -1,35 +1,41 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.IO;
 
 namespace BiblioTECh
 {
+
     public class SalvarDados
     {
-        public SalvarDados() { }
+        static string arquivo = "Users.txt";
+        static CadUser cadastro = new CadUser();
 
-        public void Salvar(CadUser cadastro, string arquivo)
+        public SalvarDados()
         {
-            Usuario dados = null;
-            string linha;
+        }
 
-            try
+        public void GravarDados()
+        {
+            Usuario[] dados = cadastro.Cadastros;
+            
+            StreamWriter sw = File.CreateText(arquivo);
+
+            for (int i = 0; i < cadastro.Tamanho(); i++)
             {
-                using (StreamWriter sw = new StreamWriter(arquivo))
+                if (dados[i] != null)
                 {
-                    for (int i = 0; i < cadastro.Tamanho(); i++)
-                    {
-                        dados = cadastro.GetUser(i);
-                        linha = $"{dados.Nome};{dados.Rua};{dados.Numero};{dados.Complemento};{dados.Bairro};{dados.Cidade};{dados.Uf};{dados.Cep};{dados.Matricula};{dados.Curso}";
-                        sw.WriteLine(linha);
-                    }
-
-                    sw.Flush();  // Certifica-se de que todos os dados são gravados no arquivo
+                    sw.WriteLine(dados[i]);
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Erro ao salvar os dados no arquivo: " + ex.Message);
-            }
+            sw.Close();
+        }
+        public void Lerdados()
+        {
+            Usuario[] dados = cadastro.Cadastros;
+            StreamReader sr = File.OpenText(arquivo);
         }
     }
 }

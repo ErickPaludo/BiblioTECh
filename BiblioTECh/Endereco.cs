@@ -16,6 +16,7 @@ namespace BiblioTECh
         private string uf;
         private string cep;
 
+        
         public Endereco(string rua, int numero, string complemento, string bairro, string cidade, string uf, string cep)
         {
             this.rua = rua;
@@ -60,6 +61,11 @@ namespace BiblioTECh
         {
             get { return cep; }
             set { cep = value; }
+        }
+        public override string ToString()
+        {
+            return $"Rua: {rua}\n Número: {numero}\n  Complemento: {complemento}\n  Bairro: {bairro}\n " +
+                $" Cidade: {cidade}\n  UF: {uf}\n  CEP: {cep}\n";
         }
     }
 }

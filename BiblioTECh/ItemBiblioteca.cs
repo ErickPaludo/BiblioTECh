@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BiblioTECh
 {
-    public class ItemBiblioteca
+   public abstract class ItemBiblioteca
     {
         private int identificacao;
         private string titulo;

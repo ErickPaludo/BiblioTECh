@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BiblioTECh
 {
-    public class Periodico : ItemBiblioteca
+    public class Periodico : ItemBiblioteca,IEmprestavel,IEstoque
     {
        private string periodicidade;
        private int numero;
@@ -19,6 +19,26 @@ namespace BiblioTECh
             this.periodicidade = periodicidade;
             this.numero = numero;
             this.ano = ano;
+        }
+        public bool Atrasado()
+        {
+            return false;
+        }
+        public bool Bloqueado()
+        {
+            return false;
+        }
+        public bool Disponivel()
+        {
+            return false;
+        }
+        public bool Emprestado()
+        {
+            return false;
+        }
+        public string Guardar()
+        {
+            return $"Titulo: {Titulo}\nEdicao: {numero}\nAno: {ano}\nIdentificacao: {Identificacao}\nSituacao: {Situacao}\n ----------";
         }
         public override string ToString()
         {

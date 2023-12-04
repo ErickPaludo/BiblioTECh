@@ -66,6 +66,7 @@ namespace BiblioTECh
                 contador++;
                 cadastro.Pos = contador;
             }
+            Console.Clear();
             sr.Close();
         }
     }

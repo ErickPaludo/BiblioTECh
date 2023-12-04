@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BiblioTECh
 {
-    public class Livro : ItemBiblioteca
+    public class Livro : ItemBiblioteca,IEmprestavel,IEstoque
     {
         private string autor;
         private string editora;
@@ -20,6 +20,26 @@ namespace BiblioTECh
             this.autor = autor;
             this.editora = editora;
             this.paginas = paginas;
+        }
+        public bool Atrasado()
+        {
+            return false;
+        }
+        public bool Bloqueado()
+        {
+            return false;
+        }
+        public bool Disponivel()
+        {
+            return false;
+        }
+        public bool Emprestado()
+        {
+            return false;
+        }
+        public string Guardar()
+        {
+            return $"Titulo: {Titulo}\nEditora: {editora}\nPaginas: {paginas}\nIdentificacao: {Identificacao}\nSituacao: {Situacao}\n ----------";
         }
         public override string ToString()
         {

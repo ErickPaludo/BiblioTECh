@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BiblioTECh
 {
-    internal class Dvd : ItemBiblioteca, IEmprestavel,IEstoque
+    internal class Dvd : ItemBiblioteca, IEmprestavel
     {
         private string assunto;
         private int duracao;
@@ -35,7 +35,7 @@ namespace BiblioTECh
             return false;
         }
 
-        public string Guardar()
+        public override string Guardar()
         {
             return $"Titulo: {Titulo}\nAssunto: {assunto}\nDuracao: {duracao}\nIdentificacao: {Identificacao}\nSituacao: {Situacao}\n ----------";
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
 
 namespace BiblioTECh
@@ -26,7 +27,7 @@ namespace BiblioTECh
                 Console.WriteLine("3- Itens no sistema;");
                 Console.WriteLine("4- Filtrar por posicao;");
                 Console.WriteLine("6- Mostrar Tudo que esta no estoque:"); //TEMP
-                Console.WriteLine("5- Voltar"); 
+                Console.WriteLine("5- Voltar");
                 entrada = entradaDados.LeInteiro("Selecione uma opcao: ");
 
                 switch (entrada)
@@ -66,16 +67,15 @@ namespace BiblioTECh
                 }
             } while (verificador == true);
         }
-        public void Adicionar() 
+        public void Adicionar()
         {
             int entrada;
             int auxident;
             string auxtitulo;
-            string auxsituacao = "nada ainda";
             entradaDados = new EntradaDados();
             Console.WriteLine("Informe a Opcao desejada:\n1- Adicionar Livro;\n2- Adicionar Periodico;\n3- Adicionar DVD;");
             entrada = entradaDados.LeInteiro("Selecione uma opcao: ");
-
+            Console.Clear();
             switch (entrada)
             {
                 case 1:
@@ -85,7 +85,7 @@ namespace BiblioTECh
                     string auxautor = entradaDados.LeString("Insira o nome do Autor do livro: ");
                     string auxeditora = entradaDados.LeString("Insira o nome da Editora do Livro: ");
                     int auxpag = entradaDados.LeInteiro("Insira o numero de paginas: ");
-                    acervo.Insere(new Livro(auxautor, auxeditora, auxpag, auxident, auxtitulo, auxsituacao));
+                    acervo.Insere(new Livro(auxautor, auxeditora, auxpag, auxident, auxtitulo, MenuSituacao()));
                     break;
                 case 2:
                     Console.WriteLine("Adicionar Periodico");
@@ -94,7 +94,7 @@ namespace BiblioTECh
                     string auxperiodicidade = entradaDados.LeString("Insira o periodo: ");
                     int auxnumero = entradaDados.LeInteiro("Insira o numero da edicao: ");
                     int auxano = entradaDados.LeInteiro("Insira o ano de publicacao: ");
-                    acervo.Insere(new Periodico(auxperiodicidade,auxnumero,auxano, auxident, auxtitulo, auxsituacao));
+                    acervo.Insere(new Periodico(auxperiodicidade, auxnumero, auxano, auxident, auxtitulo, MenuSituacao()));
                     break;
                 case 3:
                     Console.WriteLine("Adicionar DVD");
@@ -102,13 +102,45 @@ namespace BiblioTECh
                     auxtitulo = entradaDados.LeString("Insira o Titulo do Item: ");
                     string auxassunto = entradaDados.LeString("Insira o assunto do DVD: ");
                     int auxduracao = entradaDados.LeInteiro("Insira duraacao do DVD em minutos: ");
-                    acervo.Insere(new Dvd(auxassunto, auxduracao,auxident, auxtitulo,auxsituacao));
+                    acervo.Insere(new Dvd(auxassunto, auxduracao, auxident, auxtitulo, MenuSituacao()));
                     break;
                 default:
                     Console.Clear();
                     Console.WriteLine("opcao incorreta");
                     break;
             }
+        }
+        public string MenuSituacao()
+        {
+            bool val = false;
+            int entrada;
+            do
+            {
+                entrada = entradaDados.LeInteiro("Status inicial do produto:\n1 - Disponivel;\n2 - Emprestado;\n3 - Bloqueado;\n4 - Atrasado;\nInforme a opcao desejada: ");
+                if (entrada > 0 && entrada < 4)
+                {
+                    val = true;
+                    switch (entrada)
+                    {
+                        case 1:
+                            return "Disponivel";
+                            break;
+                        case 2:
+                            return "Emprestado";
+                            break;
+                        case 3:
+                            return "Bloqueado";
+                            break;
+                        default:
+                            return "Atrasado";
+                            break;
+                    }
+                }
+                else
+                {
+                    return "Atrasado";
+                }
+            } while (val == false);
         }
         public void FiltroPosi()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BiblioTECh
 {
-    public class Periodico : ItemBiblioteca,IEmprestavel,IEstoque
+    public class Periodico : ItemBiblioteca,IEmprestavel
     {
        private string periodicidade;
        private int numero;
@@ -36,7 +36,7 @@ namespace BiblioTECh
         {
             return false;
         }
-        public string Guardar()
+        public override string Guardar()
         {
             return $"Titulo: {Titulo}\nEdicao: {numero}\nAno: {ano}\nIdentificacao: {Identificacao}\nSituacao: {Situacao}\n ----------";
         }

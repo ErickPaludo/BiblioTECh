@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,10 +10,10 @@ namespace BiblioTECh
 {
     public class Acervo
     {
-        static List<IEstoque> inserir = new List<IEstoque>();
+        static List<ItemBiblioteca> inserir = new List<ItemBiblioteca>();
         EntradaDados entradaDados = new EntradaDados();
 
-        public void Insere(IEstoque estoque)
+        public void Insere(ItemBiblioteca estoque)
         {
             inserir.Add(estoque);
             Console.Clear();
@@ -65,7 +66,7 @@ namespace BiblioTECh
                     }
                 }
 
-                if(ver == false) 
+                if (ver == false)
                 {
                     Console.Clear();
                     Console.WriteLine("Codgigo nao identificado!");
@@ -75,7 +76,29 @@ namespace BiblioTECh
         public void Mostrar()
         {
             if (NoNull() == true)
-            { foreach (IEstoque e in inserir) { Console.WriteLine(e.Guardar()); } }
+                Console.WriteLine("Itens cadastrados no sistema:\n------------");
+            {
+                foreach (ItemBiblioteca e in inserir)
+                {
+                    Console.WriteLine(e.Guardar());
+                }
+            }
+        }
+        public void MostrarDisp()
+        {
+
+            if (NoNull() == true)
+                Console.WriteLine("Itens cadastrados no sistema:\n------------");
+            {
+                foreach (ItemBiblioteca e in inserir)
+                {
+                    if (e.Situacao == "Disponivel")
+                    {
+                        Console.WriteLine(e.Guardar());
+                    }
+                }
+            }
+
         }
         public void MostrarEspaco()
         {
@@ -94,7 +117,7 @@ namespace BiblioTECh
             {
                 if (posicao == i)
                 {
-                    IEstoque e = inserir[i];
+                    ItemBiblioteca e = inserir[i];
                     Console.WriteLine($"Na posicao {i + 1} esta salvo o item:\n{e.Guardar()}");
                     validador = true;
                 }
@@ -104,6 +127,102 @@ namespace BiblioTECh
                 Console.WriteLine($"Nao ha nenhum item guardado na posicao {posicao + 1}");
             }
 
+        }
+        public bool ItemTrue(int item)
+        {
+            var livro = inserir.OfType<Livro>();
+            var periodico = inserir.OfType<Periodico>();
+            var dvd = inserir.OfType<Dvd>();
+            bool val = false;
+            foreach (Livro e in livro)
+            {
+                if (item == e.Identificacao)
+                {
+                    val = true;
+                }
+            }
+            foreach (Periodico e in periodico)
+            {
+                if (item == e.Identificacao)
+                {
+                    val = true;
+                }
+            }
+            foreach (Dvd e in dvd)
+            {
+                if (item == e.Identificacao)
+                {
+                    val = true;
+                }
+            }
+            if (val == true)
+            {
+                return val;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("O item nao foi encontrado");
+                return val;
+            }
+        }
+        public ItemBiblioteca Item(int item)
+        {
+            var livro = inserir.OfType<Livro>();
+            var periodico = inserir.OfType<Periodico>();
+            var dvd = inserir.OfType<Dvd>();
+            ItemBiblioteca itemBiblioteca = null;
+            foreach (Livro e in livro)
+            {
+                if (item == e.Identificacao && e.Situacao == "Disponivel")
+                {
+                    itemBiblioteca = e;
+                }
+            }
+            foreach (Periodico e in periodico)
+            {
+                if (item == e.Identificacao && e.Situacao == "Disponivel")
+                {
+                    itemBiblioteca = e;
+                }
+            }
+            foreach (Dvd e in dvd)
+            {
+                if (item == e.Identificacao && e.Situacao == "Disponivel")
+                {
+                    itemBiblioteca = e;
+                }
+            }
+            return itemBiblioteca;
+        }
+        public int Prazo(int nome)
+        {
+            int prazo = 0;
+            var livro = inserir.OfType<Livro>();
+            var periodico = inserir.OfType<Periodico>();
+            var dvd = inserir.OfType<Dvd>();
+            foreach (Livro e in livro)
+            {
+                if (nome == e.Identificacao)
+                {
+                    prazo = 7;
+                }
+            }
+            foreach (Periodico e in periodico)
+            {
+                if (nome == e.Identificacao)
+                {
+                    prazo = 4;
+                }
+            }
+            foreach (Dvd e in dvd)
+            {
+                if (nome == e.Identificacao)
+                {
+                    prazo = 2;
+                }
+            }
+            return prazo;
         }
         public bool NoNull()
         {

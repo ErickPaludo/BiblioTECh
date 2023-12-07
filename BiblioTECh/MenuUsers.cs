@@ -9,7 +9,7 @@ namespace BiblioTECh
         MasterMenu voltar;
         CadUser cad = new CadUser();
         private SalvarDados salvar = new SalvarDados();
-        
+
         public MenuUsers()
         {
             menu();
@@ -26,37 +26,36 @@ namespace BiblioTECh
                 Console.WriteLine("2- Remover usuarios;");
                 Console.WriteLine("3- Status de espaco;");
                 Console.WriteLine("4- Verificar usuario por posicao;");
-                Console.WriteLine("5- Voltar");
+                Console.WriteLine("5- Mostrar todos os usuarios;");
+                Console.WriteLine("6- Voltar");
                 //LEMBRAR DE APAGAR OPCAO 456
                 entrada = entradaDados.LeInteiro("Selecione uma opcao: ");
-
+                Console.Clear();
                 switch (entrada)
                 {
                     case 1:
                         RegUser();
                         break;
                     case 2:
-                        Console.Clear();
                         cad.Removedor();
                         break;
                     case 3:
-                        Console.Clear();
                         cad.ExibirCadastros();
                         break;
                     case 4:
-                        Console.Clear();
                         FiltrarPosi();
                         break;
                     case 5:
-                        Console.Clear();
+                        Console.WriteLine("Usuarios cadastrados: ");
+                        cad.Exibir();
+                        break;
+                    case 6:
                         voltar = new MasterMenu();
                         break;
                     case 456:
-                        Console.Clear();
                         cad.Temp();
                         break;
                     default:
-                        Console.Clear();
                         Console.WriteLine("opcao incorreta");
                         break;
                 }

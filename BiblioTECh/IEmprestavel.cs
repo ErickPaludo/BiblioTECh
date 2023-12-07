@@ -8,6 +8,7 @@ namespace BiblioTECh
 {
     public interface IEmprestavel
     {
+
         public bool Disponivel();
         public bool Emprestado();
         public bool Bloqueado();

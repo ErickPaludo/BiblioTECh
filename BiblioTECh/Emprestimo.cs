@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BiblioTECh
 {
@@ -13,11 +10,39 @@ namespace BiblioTECh
         private ItemBiblioteca item; //Item da biblioteca que foi emprestado
         private DateTime dataEmprestimo;
         private DateTime dataDevolucao;
-        public int Identificacao { get; set; }
-        public Usuario Usuario { get; set; }
-        public ItemBiblioteca Item { get; set; }
-        private DateTime DataEmprestimo { get; set; }
-        private DateTime DataDevolucao { get; set; }
+        public static List<Emprestimo> emprestimos = new List<Emprestimo>();
+
+        public int Identificacao
+        {
+            get { return identificacao; }
+            set { identificacao = value; }
+        }
+
+        public Usuario Usuario
+        {
+            get { return usuario; }
+            set { usuario = value; }
+        }
+
+        public ItemBiblioteca Item
+        {
+            get { return item; }
+            set { item = value; }
+        }
+
+        public DateTime DataEmprestimo
+        {
+            get { return dataEmprestimo; }
+            set { dataEmprestimo = value; }
+        }
+
+        public DateTime DataDevolucao
+        {
+            get { return dataDevolucao; }
+            set { dataDevolucao = value; }
+        }
+
+        public Emprestimo() { }
 
         public Emprestimo(int identificacao, Usuario usuario, ItemBiblioteca item, DateTime dataEmprestimo, DateTime dataDevolucao)
         {
@@ -27,7 +52,30 @@ namespace BiblioTECh
             this.dataEmprestimo = dataEmprestimo;
             this.dataDevolucao = dataDevolucao;
         }
-        public void Emprestar(Usuario usr, ItemBiblioteca item, int prazo) { }
-        public void Retornar() { }
+
+        public void Emprestar(Usuario usr, ItemBiblioteca item, int prazo)
+        {
+            Emprestimo emprestimo = new Emprestimo();
+            emprestimo.Identificacao = emprestimos.Count + 1;
+            emprestimo.Usuario = usr;
+            emprestimo.Item = item;
+            emprestimo.DataEmprestimo = DateTime.Now;
+            emprestimo.DataDevolucao = emprestimo.DataEmprestimo.AddDays(prazo);
+            emprestimos.Add(emprestimo);
+            foreach(Emprestimo e in emprestimos)
+            {
+                Console.WriteLine($"Identificação: {emprestimo.Identificacao}");
+                Console.WriteLine($"Usuário: {emprestimo.Usuario.Nome}"); 
+                Console.WriteLine($"Item: {emprestimo.Item}");
+                Console.WriteLine($"Data de Empréstimo: {emprestimo.DataEmprestimo}");
+                Console.WriteLine($"Data de Devolução: {emprestimo.DataDevolucao}");
+                Console.WriteLine("------------------------------");
+            }
+        }
+
+        public void Retornar()
+        {
+            // Implement return logic here
+        }
     }
 }

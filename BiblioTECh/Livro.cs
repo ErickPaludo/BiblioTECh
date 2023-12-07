@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BiblioTECh
 {
-    public class Livro : ItemBiblioteca,IEmprestavel,IEstoque
+    public class Livro : ItemBiblioteca,IEmprestavel
     {
         private string autor;
         private string editora;
@@ -37,7 +37,7 @@ namespace BiblioTECh
         {
             return false;
         }
-        public string Guardar()
+        public override string Guardar()
         {
             return $"Titulo: {Titulo}\nEditora: {editora}\nPaginas: {paginas}\nIdentificacao: {Identificacao}\nSituacao: {Situacao}\n ----------";
         }

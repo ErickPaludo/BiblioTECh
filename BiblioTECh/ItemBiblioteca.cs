@@ -22,6 +22,7 @@ namespace BiblioTECh
             this.titulo = titulo;
             this.situacao = situacao;
         }
+        public abstract string Guardar();
         public override string ToString()
         {
             return $"{identificacao};{titulo};{situacao}";

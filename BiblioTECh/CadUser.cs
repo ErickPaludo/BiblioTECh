@@ -70,15 +70,7 @@ namespace BiblioTECh
         {
             if (NoNull() == true)
             {
-                Console.WriteLine("Nome de Usuarios:");
-                Console.WriteLine("---------------");
-                for (int i = 0; i < TAM; i++)
-                {
-                    if (cadastros[i] != null)
-                    {
-                        Console.WriteLine($"{i + 1}.Nome:{cadastros[i].Nome} |Matricula: {cadastros[i].Matricula}");
-                    }
-                }
+                Exibir();
                 string matricula = entradaDados.LeString("Informe a MATRICULA do usuario que deve ser removido: ");
                 bool validador = false;
                 for (int i = 0; i < TAM; i++)
@@ -89,7 +81,7 @@ namespace BiblioTECh
                         {
                             string auxnome = cadastros[i].Nome;
                             Console.Write($"Removendo Usuario {cadastros[i].Nome}\n");
-                            for (int j = i + 1; i < TAM; j++) 
+                            for (int j = i + 1; i < TAM; j++)
                             {
                                 validador = true;
                                 if (i != TAM - 1)
@@ -113,6 +105,7 @@ namespace BiblioTECh
 
                 if (validador == false)
                 {
+                    Console.Clear();
                     Console.WriteLine("Usuario nao identificado, tente novamente!");
                 }
             }
@@ -130,9 +123,9 @@ namespace BiblioTECh
         }
         public void Filtro(int posicao)
         {
-            posicao--;
             if (posicao < TAM && posicao > 0 && cadastros[posicao] != null)
             {
+                posicao--;
                 Console.WriteLine($"Usuario {cadastros[posicao].Nome} se emcontra nessa posicao");
             }
             else
@@ -140,6 +133,55 @@ namespace BiblioTECh
                 Console.WriteLine("Usuario nao foi encontrado!");
             }
 
+
+
+        }
+        public void Exibir()
+        {
+            if (NoNull() == true)
+            {
+                Console.WriteLine("Nome de Usuarios:");
+                Console.WriteLine("---------------");
+                for (int i = 0; i < TAM; i++)
+                {
+                    if (cadastros[i] != null)
+                    {
+                        Console.WriteLine($"{i + 1}.Nome:{cadastros[i].Nome} |Matricula: {cadastros[i].Matricula}");
+                    }
+                }
+                Console.WriteLine("---------------");
+            }
+        }
+        public bool UserTrue(string matricula)
+        {
+            bool val = false;
+            for (int i = 0; i < pos; i++)
+            {
+                if (cadastros[i].Matricula == matricula)
+                {
+                    val = true;
+                    break;
+                }
+            }
+            if (val == true)
+            {
+                return true;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Usuario nao encontrado!");
+                return false;
+            }
+        }
+        public Usuario Usu(string matricula)
+        {
+            int posicao = 0;
+            for(int i = 0; i < pos; i++)
+            {
+                if(matricula == cadastros[i].Matricula) { posicao = i; break; }
+            }
+            return cadastros[posicao];
         }
         public bool NoNull()
         {

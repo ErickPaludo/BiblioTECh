@@ -18,9 +18,9 @@ namespace BiblioTECh
             this.nome = nome;
             endereco = new Endereco(rua, numero,complemento, bairro, cidade, uf, cep);
         }
-        public string Nome { get { return nome; } set { value = nome; } }
-        public Endereco Endereco { get { return endereco; } set { value = endereco; } }
-        public override string ToString()
+        public string Nome { get { return nome; } set { nome = value; } }
+        public Endereco Endereco { get { return endereco; } set { endereco = value; } }
+        public override string ToString()   
         {
             return $" Nome: {Nome}\n";
         }

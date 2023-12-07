@@ -11,6 +11,7 @@ namespace BiblioTECh
         EntradaDados entradaDados = new EntradaDados();
         MenuUsers menuuser;
         MenuAcervo menuacervo;
+        MenuEmprestimos menuemprestimos;
        
 
         public MasterMenu()
@@ -24,26 +25,25 @@ namespace BiblioTECh
             do
             {
                 Console.WriteLine("Informe a Opcao desejada:");
-                Console.WriteLine("1- Menu de usuarios;");
-                Console.WriteLine("2- Menu para Acervo;");
-                Console.WriteLine("3- Sair");
-                entrada = entradaDados.LeInteiro("Selecione uma opcao: ");
+                Console.WriteLine("1- Menu de usuarios;\n2- Menu para Acervo;\n3- Menu Emprestimos;\n4- Sair");
 
+                entrada = entradaDados.LeInteiro("Selecione uma opcao: ");
+                Console.Clear();
                 switch (entrada)
                 {
                     case 1:
-                        Console.Clear();
                         menuuser = new MenuUsers();
                         break;
                     case 2:
-                        Console.Clear();
                         menuacervo = new MenuAcervo();
                         break;
                     case 3:
+                        menuemprestimos = new MenuEmprestimos();
+                        break;
+                    case 4:
                         Environment.Exit(0);
                         break;
                     default:
-                        Console.Clear();
                         Console.WriteLine("opcao incorreta");
                         break;
                 }
